@@ -1,21 +1,23 @@
-// import readlineSync from "readline-sync";
 import readlineSync from "readline-sync";
 import { getNumber, greeting, goodbye, win } from "../src/index.js";
 
-export const yesOrNo = (num) => {
-  return num % 2 === 0 ? "yes" : "no";
+let gcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
+  return gcd(b, a % b);
 };
 
-export const yourAnswer = () => {
+export const nod = () => {
   greeting();
-  console.log("Answer 'yes' if number even otherwise answer 'no'.");
-  let answer;
+  console.log("Find the greatest common divisor of given numbers.");
   let i = 0;
   while (i < 3) {
-    let generateNum = getNumber(100);
-    console.log("Question: ", generateNum);
-    let result = yesOrNo(generateNum);
-    answer = readlineSync.question("Your answer: ");
+    let a = getNumber(15);
+    let b = getNumber(20);
+    console.log("Question: ", a, b);
+    let result = gcd(a, b);
+    let answer = readlineSync.question("Your answer: ");
     if (answer == result) {
       console.log("Correct!");
       i++;
