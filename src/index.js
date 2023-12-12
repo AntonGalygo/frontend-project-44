@@ -15,7 +15,7 @@ export const goodbye = () => {
 //get a random number
 export const getNumber = (count) => {
   let numb = 0;
-  numb = Math.floor(Math.random() * count);
+  numb = Math.floor(Math.random() * count + 1);
   return numb;
 };
 
