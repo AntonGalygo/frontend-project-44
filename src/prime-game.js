@@ -12,7 +12,7 @@ export const isNumberPrime = () => {
   let i = 0;
   while (i < 3) {
     let numToShow = getNumber(100);
-    console.log(numToShow);
+    console.log("Question: ", numToShow);
     let answer = readlineSync.question("Your answer: ");
     let result = primeNumbers.includes(numToShow) ? "yes" : "no";
     if (answer == result) {
