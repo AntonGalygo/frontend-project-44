@@ -1,4 +1,4 @@
-import { engineGame, getNumber } from "./test.js";
+import { engineGame, getNumber } from "./index.js";
 
 const description = "Answer 'yes' if number even otherwise answer 'no'.";
 
@@ -17,4 +17,4 @@ const evenGame = () => {
   engineGame(description);
 };
 
-// evenGame();
+evenGame();
