@@ -1,6 +1,6 @@
 import { engineGame, getNumber } from "./index.js";
 
-const description = "Answer 'yes' if number even otherwise answer 'no'.";
+const description = "Answer 'yes' if number even, otherwise answer 'no'.";
 
 const getValues = () => {
   let result = [];
