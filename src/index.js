@@ -6,7 +6,7 @@ export const getNumber = (count) => {
   return numb;
 };
 
-export const engineGame = (description) => {
+export const engineGame = (description, getValues) => {
   console.log("Welcome to the Brain Games!");
   let name = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${name}!`);
@@ -14,16 +14,16 @@ export const engineGame = (description) => {
   let i = 0;
   while (i < 3) {
     const [question, rightAnswer] = getValues();
-    console.log("Question: ", question);
+    console.log("Question:", question);
     let answer = readlineSync.question("Your answer: ");
-    let result = rightAnswer;
-    if (answer === result) {
+    if (answer == rightAnswer) {
       console.log("Correct!");
       i++;
-    } else if (answer != result) {
+    } else if (answer != rightAnswer) {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${result}'`
+        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`
       );
+      console.log(`Let's try again, ${name}`);
       break;
     }
   }

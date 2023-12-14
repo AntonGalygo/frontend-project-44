@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { isNumberPrime } from "../src/prime-game.js";
+import { primeGame } from "../src/prime-game.js";
 
-isNumberPrime();
+primeGame();

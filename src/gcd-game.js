@@ -1,33 +1,24 @@
-import readlineSync from "readline-sync";
-import { getNumber, greeting, goodbye, win } from "../src/index.js";
+import { getNumber, engineGame } from "../src/index.js";
 
-let gcd = (a, b) => {
+const description = "Find the greatest common divisor of given numbers.";
+
+let check = (a, b) => {
   if (!b) {
     return a;
   }
-  return gcd(b, a % b);
+  return check(b, a % b);
 };
 
-export const nod = () => {
-  greeting();
-  console.log("Find the greatest common divisor of given numbers.");
-  let i = 0;
-  while (i < 3) {
-    let a = getNumber(15);
-    let b = getNumber(20);
-    console.log("Question: ", a, b);
-    let result = gcd(a, b);
-    let answer = readlineSync.question("Your answer: ");
-    if (answer == result) {
-      console.log("Correct!");
-      i++;
-    } else if (answer != result) {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${result}'`
-      );
-      goodbye();
-      break;
-    }
-  }
-  win(i);
+const getValues = () => {
+  const a = getNumber(25);
+  const b = getNumber(25);
+  let question = `${a} ${b}`;
+  let rightAnswer = check(a, b);
+  let result = [];
+  result.push(question, rightAnswer);
+  return result;
+};
+
+export const gcdGame = () => {
+  engineGame(description, getValues);
 };

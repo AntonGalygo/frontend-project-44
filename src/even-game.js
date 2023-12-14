@@ -13,8 +13,8 @@ const getValues = () => {
 
 // console.log(getValues());
 
-const evenGame = () => {
-  engineGame(description);
+export const evenGame = () => {
+  engineGame(description, getValues);
 };
 
-evenGame();
+// evenGame();
