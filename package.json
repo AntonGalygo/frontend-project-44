@@ -2,8 +2,8 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/AntonGalygo/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AntonGalygo/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "Set of 5 Brain Games [![Actions Status](https://github.com/AntonGalygo/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AntonGalygo/frontend-project-44/actions)",
+  "main": "src/index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",

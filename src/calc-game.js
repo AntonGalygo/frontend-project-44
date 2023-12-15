@@ -1,32 +1,39 @@
-import { engineGame, getNumber } from './index.js';
+import getNumber from './generate-number.js';
+import engineGame from './index.js';
 
 const description = 'What is the result of the expression?';
 
-export const getValues = () => {
+const getSign = () => {
   const sings = ['+', '-', '*'];
   const count = Math.floor(Math.random() * 3);
-  const a = getNumber(25);
-  const b = getNumber(25);
-  let question;
+  const choosenSign = sings[count];
+  return choosenSign;
+};
+
+const calculate = (a, sign, b) => {
+  const question = `${a} ${sign} ${b}`;
   let rightAnswer;
   const result = [];
-  const choosenSign = sings[count];
-  if (choosenSign === '+') {
+  if (sign === '+') {
     rightAnswer = a + b;
-    question = `${a} + ${b}`;
-  } else if (choosenSign === '-') {
+  } else if (sign === '-') {
     rightAnswer = a - b;
-    question = `${a} - ${b}`;
-  } else if (choosenSign === '*') {
+  } else if (sign === '*') {
     rightAnswer = a * b;
-    question = `${a} * ${b}`;
   }
   result.push(question, rightAnswer);
   return result;
 };
 
-export const calcGame = () => {
+const getValues = () => {
+  const [question, rightAnswer] = calculate(getNumber(10), getSign(), getNumber(10));
+  const result = [];
+  result.push(question, rightAnswer);
+  return result;
+};
+
+const playCalcGame = () => {
   engineGame(description, getValues);
 };
 
-// calcGame();
+export default playCalcGame;

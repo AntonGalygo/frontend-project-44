@@ -1,4 +1,5 @@
-import { getNumber, engineGame } from './index.js';
+import getNumber from './generate-number.js';
+import engineGame from './index.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -28,6 +29,6 @@ export const getValues = () => {
   return result;
 };
 
-export const progrGame = () => {
+export const playProgrGame = () => {
   engineGame(description, getValues);
 };
