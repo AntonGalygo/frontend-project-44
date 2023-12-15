@@ -14,15 +14,14 @@ export const engineGame = (description, getValues) => {
   let i = 0;
   while (i < 3) {
     const [question, rightAnswer] = getValues();
+    const rightAnswerStr = rightAnswer.toString();
     console.log('Question:', question);
     const answer = readlineSync.question('Your answer: ');
-    if (answer == rightAnswer) {
+    if (answer === rightAnswerStr) {
       console.log('Correct!');
       i += 1;
-    } else if (answer !== rightAnswer) {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`
-      );
+    } else if (answer !== rightAnswerStr) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswerStr}'`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
