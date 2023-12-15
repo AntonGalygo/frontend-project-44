@@ -1,15 +1,15 @@
-import { getNumber, engineGame } from '../src/index.js';
+import { getNumber, engineGame } from './index.js';
 
 const description = 'What number is missing in the progression?';
 
 export const generateProgression = (a, b) => {
   let i = 0;
   let sum = a;
-  let arr = [];
+  const arr = [];
   while (i < 10) {
-    sum = sum + b;
+    sum += b;
     arr.push(sum);
-    i++;
+    i += 1;
   }
   return arr;
 };
@@ -17,13 +17,13 @@ export const generateProgression = (a, b) => {
 export const getValues = () => {
   const a = getNumber(50);
   const b = getNumber(5);
-  let str = generateProgression(a, b);
-  let newNum = '..';
-  let index = getNumber(9);
-  let rightAnswer = str[index];
+  const str = generateProgression(a, b);
+  const newNum = '..';
+  const index = getNumber(9);
+  const rightAnswer = str[index];
   str[index] = newNum;
-  let question = str.join(' ');
-  let result = [];
+  const question = str.join(' ');
+  const result = [];
   result.push(question, rightAnswer);
   return result;
 };
