@@ -1,6 +1,6 @@
-import { getNumber, engineGame } from "../src/index.js";
+import { getNumber, engineGame } from '../src/index.js';
 
-const description = "Find the greatest common divisor of given numbers.";
+const description = 'Find the greatest common divisor of given numbers.';
 
 let check = (a, b) => {
   if (!b) {

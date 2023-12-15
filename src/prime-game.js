@@ -1,4 +1,4 @@
-import { getNumber, engineGame } from "../src/index.js";
+import { getNumber, engineGame } from '../src/index.js';
 
 const description =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -11,7 +11,7 @@ export const primeNumbers = [
 export const getValues = () => {
   let result = [];
   let question = getNumber(100);
-  let rightAnswer = primeNumbers.includes(question) ? "yes" : "no";
+  let rightAnswer = primeNumbers.includes(question) ? 'yes' : 'no';
   result.push(question, rightAnswer);
   return result;
 };

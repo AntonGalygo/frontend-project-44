@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 export const getNumber = (count) => {
   let numb = 0;
@@ -7,17 +7,17 @@ export const getNumber = (count) => {
 };
 
 export const engineGame = (description, getValues) => {
-  console.log("Welcome to the Brain Games!");
-  let name = readlineSync.question("May I have your name? ");
+  console.log('Welcome to the Brain Games!');
+  let name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(description);
   let i = 0;
   while (i < 3) {
     const [question, rightAnswer] = getValues();
-    console.log("Question:", question);
-    let answer = readlineSync.question("Your answer: ");
+    console.log('Question:', question);
+    let answer = readlineSync.question('Your answer: ');
     if (answer == rightAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       i++;
     } else if (answer != rightAnswer) {
       console.log(

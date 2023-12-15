@@ -1,9 +1,9 @@
-import { engineGame, getNumber } from "../src/index.js";
+import { engineGame, getNumber } from '../src/index.js';
 
-const description = "What is the result of the expression?";
+const description = 'What is the result of the expression?';
 
 export const getValues = () => {
-  const sings = ["+", "-", "*"];
+  const sings = ['+', '-', '*'];
   const count = Math.floor(Math.random() * 3);
   const a = getNumber(25);
   const b = getNumber(25);
@@ -11,13 +11,13 @@ export const getValues = () => {
   let rightAnswer;
   let result = [];
   let choosenSign = sings[count];
-  if (choosenSign === "+") {
+  if (choosenSign === '+') {
     rightAnswer = a + b;
     question = `${a} + ${b}`;
-  } else if (choosenSign === "-") {
+  } else if (choosenSign === '-') {
     rightAnswer = a - b;
     question = `${a} - ${b}`;
-  } else if (choosenSign === "*") {
+  } else if (choosenSign === '*') {
     rightAnswer = a * b;
     question = `${a} * ${b}`;
   }
