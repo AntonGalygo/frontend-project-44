@@ -3,9 +3,7 @@ import engineGame from './index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (num) => {
-  return num % 2 === 0 ? 'yes' : 'no';
-};
+const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 const getValues = () => {
   const result = [];
