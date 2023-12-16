@@ -6,15 +6,10 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 const getValues = () => {
-  const result = [];
   const question = getNumber(100);
-  let rightAnswer = '';
-  rightAnswer = isEven(question);
-  result.push(question, rightAnswer);
-  return result;
+  const rightAnswer = isEven(question);
+  return [question, rightAnswer];
 };
-
-// console.log(getValues());
 
 const playEvenGame = () => {
   engineGame(description, getValues);

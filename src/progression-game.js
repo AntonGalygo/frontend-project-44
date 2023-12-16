@@ -24,9 +24,7 @@ export const getValues = () => {
   const rightAnswer = str[index];
   str[index] = newNum;
   const question = str.join(' ');
-  const result = [];
-  result.push(question, rightAnswer);
-  return result;
+  return [question, rightAnswer];
 };
 
 export const playProgrGame = () => {

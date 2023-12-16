@@ -4,8 +4,13 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0a269f62a55d25134d9/maintainability)](https://codeclimate.com/github/AntonGalygo/frontend-project-44/maintainability)
 
 Welcome to the Brain Games!
+
+For install enter the command 'make install' in the console.
+
 You can choose one of 5 math games.
-To start the game you need to open the console and enter the name of the game.
+
+To start the game you need enter the name of the game.
+
 The name and video example of the game is below in the description.
 
 Brain-even: https://asciinema.org/a/cRTgTiUT6CanfbhjrsLIzmYR6

@@ -11,11 +11,9 @@ const isPrime = (num) => {
 };
 
 const getValues = () => {
-  const result = [];
   const question = getNumber(47);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
-  result.push(question, rightAnswer);
-  return result;
+  return [question, rightAnswer];
 };
 
 const playPrimeGame = () => {

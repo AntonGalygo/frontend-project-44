@@ -6,27 +6,31 @@ const description = 'What is the result of the expression?';
 const getSign = () => {
   const sings = ['+', '-', '*'];
   const count = Math.floor(Math.random() * 3);
-  const choosenSign = sings[count];
-  return choosenSign;
+  return sings[count];
 };
 
 const calculate = (a, sign, b) => {
-  const question = `${a} ${sign} ${b}`;
   let rightAnswer;
-  const result = [];
-  if (sign === '+') {
-    rightAnswer = a + b;
-  } else if (sign === '-') {
-    rightAnswer = a - b;
-  } else if (sign === '*') {
-    rightAnswer = a * b;
+  switch (sign) {
+    case '+':
+      rightAnswer = a + b;
+      break;
+    case '-':
+      rightAnswer = a - b;
+      break;
+    case '*':
+      rightAnswer = a * b;
+      break;
   }
-  result.push(question, rightAnswer);
-  return result;
+  return rightAnswer;
 };
 
 const getValues = () => {
-  const [question, rightAnswer] = calculate(getNumber(10), getSign(), getNumber(10));
+  const a = getNumber(10);
+  const b = getNumber(10);
+  const sign = getSign();
+  const question = `${a} ${sign} ${b}`;
+  const rightAnswer = calculate(a, sign, b);
   const result = [];
   result.push(question, rightAnswer);
   return result;

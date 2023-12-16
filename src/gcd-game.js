@@ -15,9 +15,7 @@ const getValues = () => {
   const b = getNumber(25);
   const question = `${a} ${b}`;
   const rightAnswer = findGcd(a, b);
-  const result = [];
-  result.push(question, rightAnswer);
-  return result;
+  return [question, rightAnswer];
 };
 
 const playGcdGame = () => {
