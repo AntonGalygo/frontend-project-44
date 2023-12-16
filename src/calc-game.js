@@ -21,6 +21,7 @@ const calculate = (a, sign, b) => {
     case '*':
       rightAnswer = a * b;
       break;
+    default:
   }
   return rightAnswer;
 };
